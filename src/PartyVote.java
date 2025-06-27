@@ -1,26 +1,28 @@
-public class PartyVote
-{
+import java.util.Scanner;
+
+public class PartyVote {
     public static void main(String[] args) {
+        //Variables
+        Scanner in = new Scanner(System.in);
         String menuChoice = "";
-        String menu = "D - Democrat, R - Republican, I - Independent O - Other";
-        menuChoice = "R";
 
-        if (menuChoice.equalsIgnoreCase ("D")) ;
-        {
-            System.out.println("You're a Democrat, you get a Donkey!");
-        }
-        else if (menuChoice.equalsIgnoreCase("R"));
-        {
-            System.out.println("You're a Republican, you get an Elephant!");
-        }
-        else if (menuChoice.equalsIgnoreCase("I"));
-        {
-            System.out.println("You're a Independent, you get a Human!");
-        }
-        else if (menuChoice.equalsIgnoreCase("O"));
-        {
-            System.out.println("You're from a different party, you get null!");
-        }
+        //Scanner/Menu
+        System.out.println("Please choose your political party: ");
+        System.out.println("D - Democrat");
+        System.out.println("R - Republican");
+        System.out.println("I - Independent");
+        System.out.print("Which are you? ");
+        menuChoice = in.nextLine();
 
+        //Outputs
+        if (menuChoice.equalsIgnoreCase("D")) {
+            System.out.println("You are a Democratic Donkey.");
+        } else if (menuChoice.equalsIgnoreCase("R")) {
+            System.out.println("You are a Republican Elephant.");
+        } else if (menuChoice.equalsIgnoreCase("I")) {
+            System.out.println("You are an Independent Person.");
+        } else {
+            System.out.println("You're weird!");
+        }
     }
 }
